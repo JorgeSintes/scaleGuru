@@ -23,6 +23,8 @@ function getInterval(note: Note, interval: string) {
       return note.diminishedFifth();
     case '5':
       return note.perfectFifth();
+    case '#5':
+      return note.augmentedFifth();
     case 'b6':
       return note.minorSixth();
     case '6':
@@ -76,6 +78,12 @@ export class Scale {
     return numAccidentals;
   }
 
+  getName(): string {
+    return this.definition.alternateName
+      ? `${this.root.name} ${this.definition.name} (${this.definition.alternateName})`
+      : `${this.root.name} ${this.definition.name}`;
+  }
+
   simplify(): Scale {
     let otherScale = this.enharmonicEquivalent();
     if (otherScale.getNumAccidentals() < this.getNumAccidentals()) {
@@ -86,5 +94,14 @@ export class Scale {
 
   enharmonicEquivalent(): Scale {
     return new Scale(this.root.enharmonicEquivalent(), this.definition);
+  }
+
+  toVexflow(): string {
+    return this.ascending()
+      .map((note, index) => {
+        const vexNote = `${note.name}${note.octaveNum}`;
+        return index === 0 ? `${vexNote}/q` : vexNote;
+      })
+      .join(', ');
   }
 }

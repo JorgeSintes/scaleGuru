@@ -1,7 +1,7 @@
 const noteNamesF = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
 const noteNamesS = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 const naturalNoteNames = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
-export const allNoteNames = [
+const allNoteNames = [
   'C',
   'C#',
   'Db',
@@ -274,3 +274,23 @@ export class Note {
     return Note.fromAbsPositionAndName(this.absPosition + 12, this.name[0]);
   }
 }
+
+export const allNotes: Map<string, Note> = new Map([
+  ['C', new Note('C', 4)],
+  ['C#', new Note('C#', 4)],
+  ['Db', new Note('Db', 4)],
+  ['D', new Note('D', 4)],
+  ['D#', new Note('D#', 4)],
+  ['Eb', new Note('Eb', 4)],
+  ['E', new Note('E', 4)],
+  ['F', new Note('F', 4)],
+  ['F#', new Note('F#', 4)],
+  ['Gb', new Note('Gb', 4)],
+  ['G', new Note('G', 4)],
+  ['G#', new Note('G#', 4)],
+  ['Ab', new Note('Ab', 4)],
+  ['A', new Note('A', 4)],
+  ['A#', new Note('A#', 4)],
+  ['Bb', new Note('Bb', 4)],
+  ['B', new Note('B', 3)],
+]);

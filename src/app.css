@@ -3,6 +3,18 @@
 @plugin 'flowbite/plugin';
 
 @custom-variant dark (&:where(.dark, .dark *));
+@font-face {
+  font-family: 'Petaluma';
+  src: url('/fonts/petaluma/petaluma.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Musejazz';
+  src: url('/fonts/musejazz/musejazz.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @theme {
   --color-primary-50: #F3FAF7;

@@ -70,7 +70,7 @@ export const ionianAugmented: ScaleDefinition = {
 export const mixolydianFlat9Flat13: ScaleDefinition = {
   name: 'Myxolydian b9 b13',
   alternateName: 'Phrygian Dominant',
-  degrees: ['1', '2', '3', '4', '#5', '6', '7'],
+  degrees: ['1', 'b2', '3', '4', '5', 'b6', 'b7'],
 };
 export const ultraLocrian: ScaleDefinition = {
   name: 'Ultra Locrian',
@@ -97,3 +97,7 @@ export const allScales: ScaleDefinition[] = [
   mixolydianFlat9Flat13,
   ultraLocrian,
 ];
+
+export const allScalesMap: Map<string, ScaleDefinition> = new Map(
+  allScales.map((scale) => [scale.name, scale]),
+);
