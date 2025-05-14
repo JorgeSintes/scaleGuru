@@ -77,10 +77,14 @@ export class Scale {
   }
 
   simplify(): Scale {
-    let otherScale = new Scale(this.root.enharmonicEquivalent(), this.definition);
+    let otherScale = this.enharmonicEquivalent();
     if (otherScale.getNumAccidentals() < this.getNumAccidentals()) {
       return otherScale;
     }
     return this;
+  }
+
+  enharmonicEquivalent(): Scale {
+    return new Scale(this.root.enharmonicEquivalent(), this.definition);
   }
 }
