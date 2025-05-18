@@ -6,7 +6,7 @@
   </div>
   <div class="flex items-center gap-8">
     <!-- <DarkMode /> -->
-    <a href="/" class="hover:text-primary-300 text-xl hover:underline">Home</a>
-    <a href="/about" class="hover:text-primary-300 text-xl hover:underline">About</a>
+    <a href="/" class="hover:text-primary-300 text-xl hover:underline">Inspector</a>
+    <a href="/practice" class="hover:text-primary-300 text-xl hover:underline">Practice</a>
   </div>
 </div>

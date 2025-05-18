@@ -1,14 +1,14 @@
 <script>
-  import { selectedRoot, selectedScale } from '$lib/components/Inspector/store.svelte';
   import { allNotes } from '$lib/core/note';
   import { Scale } from '$lib/core/scale';
   import { allScalesMap } from '$lib/core/scaleDefinition';
-  import { onMount } from 'svelte';
   import { VexFlow } from 'vexflow';
 
+  let { root, scale } = $props();
+
   const showScale = $derived.by(() => {
-    let theNote = allNotes.get(selectedRoot.current);
-    let theScale = allScalesMap.get(selectedScale.current);
+    let theNote = allNotes.get(root.current);
+    let theScale = allScalesMap.get(scale.current);
     if (theNote === undefined || theScale === undefined) return;
     return new Scale(theNote, theScale);
   });
