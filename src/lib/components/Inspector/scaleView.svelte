@@ -52,7 +52,7 @@
   <div
     class="w-full rounded-lg border border-gray-200 bg-white p-6 text-left shadow-md lg:w-9/12 dark:border-gray-700 dark:bg-gray-800"
   >
-    <h2 class="mb-8 text-3xl font-semibold text-gray-900 dark:text-white">
+    <h2 class="mb-8 text-2xl font-semibold text-gray-900 dark:text-white">
       {showScale?.getName()}
     </h2>
     <div id="scaleContainer" class="flex justify-center lg:mx-15"></div>

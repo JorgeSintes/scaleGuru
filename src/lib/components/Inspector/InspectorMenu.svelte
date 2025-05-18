@@ -27,21 +27,21 @@
   }
 </script>
 
-<div class={`flex justify-between ${theClass}`}>
-  <div>
-    <Label class="text-black dark:text-white">Select key:</Label>
+<div class={`flex flex-col sm:flex-row sm:justify-between ${theClass}`}>
+  <div class="w-full sm:w-60 lg:w-80">
+    <Label class="text-lg text-black dark:text-white">Select key:</Label>
     <div class="flex">
       <Select
-        class="w-20"
-        selectClass="rounded-r-none"
+        selectClass="rounded-r-none grow"
+        class="grow"
         items={rootOptions}
         bind:value={selectedRoot.current}
       />
-      <Button class="rounded-l-none focus:ring-0" onclick={toggleEnhamonic}>♯/♭</Button>
+      <Button class="min-w-15 rounded-l-none text-black focus:ring-0" onclick={toggleEnhamonic}>♯/♭</Button>
     </div>
   </div>
-  <div>
-    <Label class="text-black dark:text-white">Select scale:</Label>
-    <Select selectClass="min-w-40" items={scaleOptions} bind:value={selectedScale.current} />
+  <div class="w-full sm:w-60 lg:w-80">
+    <Label class="text-xl text-black dark:text-white">Select scale:</Label>
+    <Select selectClass="" items={scaleOptions} bind:value={selectedScale.current} />
   </div>
 </div>

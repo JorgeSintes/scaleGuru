@@ -17,16 +17,16 @@
 }
 
 @theme {
-  --color-primary-50: #F3FAF7;
-  --color-primary-100: #DEF7EC;
-  --color-primary-200: #BCF0DA;
-  --color-primary-300: #84E1BC;
-  --color-primary-400: #31C48D;
-  --color-primary-500: #0E9F6E;
-  --color-primary-600: #057A55;
-  --color-primary-700: #046C4E;
-  --color-primary-800: #03543F;
-  --color-primary-900: #014737;
+  --color-primary-50: #002200;
+  --color-primary-100: #0e3512;
+  --color-primary-200: #21481e;
+  --color-primary-300: #345d2a;
+  --color-primary-400: #487236;
+  --color-primary-500: #5e8843;
+  --color-primary-600: #77a25a;
+  --color-primary-700: #91be72;
+  --color-primary-800: #abd98a;
+  --color-primary-900: #c6f6a3;
 
   --color-secondary-50: #f0f9ff;
   --color-secondary-100: #e0f2fe;
@@ -39,6 +39,7 @@
   --color-secondary-800: #075985;
   --color-secondary-900: #0c4a6e;
 }
+
 
 @source "../node_modules/flowbite-svelte/dist";
 @source "../node_modules/flowbite-svelte-icons/dist";
